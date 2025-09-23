@@ -1,0 +1,22 @@
+name: "Test Runner Action"
+description: "Installs deps and runs tests"
+inputs:
+  node-version:
+    description: "Node.js version"
+    required: false
+    default: "16"
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+      shell: bash
+
+    - name: Run tests
+      run: npm test
+      shell: bash
