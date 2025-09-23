@@ -1,5 +1,3 @@
-mkdir -p .github/workflows
-cat > .github/workflows/ci.yml <<'EOF'
 name: Basic CI
 
 on:
@@ -11,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -24,4 +22,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-EOF
