@@ -27,4 +27,14 @@ jobs:
       - name: Npm lint 
         run: npm run lint
 
+      - name: Build project
+        run: npm run build
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: build-output
+          path: dist/
+          
+
    
