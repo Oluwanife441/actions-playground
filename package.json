@@ -2,10 +2,10 @@
   "name": "actions-playground",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "jest": "^29.0.0",
-    "lint": "eslint ."
   }
 }
