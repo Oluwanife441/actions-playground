@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "echo \"Building project...\" && mkdir dist && echo 'Hello from build' > dist/index.html"
+
   },
   "devDependencies": {
     "jest": "^29.0.0",
